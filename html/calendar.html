@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="../css/calendar.css" />
+
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Mini Calendar</title>
+</head>
+
+<body>
+  <header>
+
+    <!--------------------------------->
+    <!-- Navbar Start -->
+    <!-------------------------------->
+
+    <div><a href="../html/index.html"><img class="navbar-logo" src="../res/MakeMake Logo.png" alt="Make Make Logo"></a>
+    </div>
+    <div class="menu">
+      <div class="nav-btn">
+        <i class="fas fa-times close-btn"></i>
+      </div>
+      <a href="/index.html">Home</a>
+      <a href="./calendar.html">Calendar</a>
+    </div>
+    <div class="nav-btn">
+      <i class="fas fa-bars menu-btn"></i>
+    </div>
+
+    <!--------------------------------->
+    <!-- Navbar End -->
+    <!-------------------------------->
+
+
+  </header>
+  <main>
+    <div class="container">
+    <div class="calendar">
+      <div class="header">
+        <div class="month"></div>
+        <div class="btns">
+          <div class="btn today-btn">
+            <i class="fas fa-calendar-day"></i>
+          </div>
+          <div class="btn prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="btn next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="weekdays">
+        <div class="day">Sun</div>
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+      </div>
+      <div class="days">
+        <!-- lets add days using js -->
+      </div>
+    </div>
+  </div>
+
+  <div class="schedule-wrapper">
+    <div class="schedule">
+      <h2>Locations</h2>
+      <p style="margin-top: 20px;">April 28th - May 2nd | 993 King Ave Columbus, OH 43212</p>
+      <p>May 3rd - May 7th | 233 S Civic Center dr Columbus, OH 43081</p>
+      <p>May 8th - May 16th | 342 E Long St, Columbus, OH 43215</p>
+      <p>May 17th - May 24th | 233 S Civic Center dr Columbus, OH 43081 </p>
+      <p>May 25th - June 1st | 47 N Pearl St, Columbus, OH 43215</p>
+    </div>
+  </div>
+
+  <div class="schedule-wrapper2">
+    <div class="schedule2">
+      <h2>Holidays</h2>
+      <p style="margin-top: 20px;">21 Tue - International Tea Day (Get a free sample of Jujube tea)</p>
+      <p> 23 Thu - World Turtle Day (Get 5% off if you order with a picture of your turtle)</p>
+      <p> 24 Fri - National Brother's Day (Get 5% off if you order with your brother)</p>
+      <p>26 Sun - National Paper Airplane Day (Everyone makes a paper airplane. Whoever's paper airplane flies the
+        farthest gets their order for free.)</p>
+      <p>27 Mon - Memorial Day (All active and former U.S. Military Personel eat for free)</p>
+      <p>31 Fri - National Smile Day(Get a special gift with your order)</p>
+      <p> 1 Sat - National Red Rose Day (Get a free rose with your order)</p>
+    </div>
+  </div>
+
+  </main>
+  <footer>
+    <div id="footer_section">
+      <!--FOOTER SECTION-->
+      <div class="footer_container">
+        <div class="footer_links"><!--links section-->
+          <div class="footer_link_wrapper"><!--links wrapper-->
+            <div class="footer_link_items"><!-- link group 1-->
+              <h2>Credits</h2>
+              <hr class="small_hr">
+              <p style="padding-bottom: 10px;">Made by Sean Kalb</p>
+              <p style="padding-bottom: 10px;">Credit to Jayla and Isabel</p>
+              <a href="../res/Food Truck Sources.pdf" download>Sources</a>
+
+            </div>
+            <div class="footer_link_items"><!-- link group 2-->
+              <h2>Contact Us</h2>
+              <hr class="small_hr">
+              <p>Columbus Ohio 43215</p>
+              <p>Phone: (614) 645-3111</p>
+            </div>
+            <div class="footer_link_items"><!-- link group 4-->
+              <h2>Social Media</h2>
+              <hr class="small_hr">
+              <div class="wrapper" style="width: 280px;">
+                <div class="button">
+                  <div class="icon">
+                    <a href="" target="_blank" style="color: black;"><i class="fa fa-facebook"></i></a>
+                  </div>
+                </div>
+                <div class="button">
+                  <div class="icon">
+                    <a href="" target="_blank" style="color: black;"><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="button">
+                  <div class="icon">
+                    <a href="" target="_blank" style="color: black;">
+                      <i class="fa-brands fa-x-twitter"></i></a>
+                  </div>
+                </div>
+                <div class="button">
+                  <div class="icon">
+                    <a href="https://www.youtube.com/cityofcolumbus" target="_blank" style="color: black;"><i
+                        class="fa fa-youtube"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="website_rights">&copy &nbsp PS Food Truck 2024. All rights reserved.</p> <!--copyright info-->
+      </div>
+  </footer>
+
+
+  <!-- SCRIPT -->
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("header");
+      header.classList.toggle('sticky', window.scrollY > 50);
+    })
+  </script>
+  <script src="../js/calendar.js"></script>
+  <script src="https://kit.fontawesome.com/c4fc73ac8f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
